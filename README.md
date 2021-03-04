@@ -35,6 +35,7 @@ This step is straightforward
 - When the install finishes, boot from the disk and you will get a garbled screen. Multiple boxes of display
 - Make the resolution 800x600 and try and work with it, and get the combo update installed. DO NOT REBOOT
 - Once the combo update finishes, Put the Graphics Drivers in a flash drive, and install all the packages, including the ethernet, but not WiFi.
+- Use Kext Utility to Fix Permissions and Rebuild Caches
 - Now reboot.
 
 ## Post Install
@@ -46,3 +47,4 @@ This step is straightforward
 
 ## TODO
 - Fix Sleep
+- DSDT Patches for backlight
