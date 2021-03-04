@@ -1,0 +1,17 @@
+Title r8139
+Version 1.0
+Description 
+DefaultLocation /
+DeleteWarning 
+
+### Package Flags
+
+NeedsAuthorization YES
+Required NO
+Relocatable YES
+RequiresReboot NO
+UseUserMask NO
+OverwritePermissions NO
+AllowBackRev YES
+RootVolumeOnly NO
+OnlyUpdateInstalledLanguages NO

@@ -1,0 +1,37 @@
+#!/bin/sh
+
+vbn=`cat "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" | grep -w i386`
+if [ -n "$vbn" ]; then
+	{
+	echo " "
+	}
+else
+	{
+	echo "modifying Boot.plist for 32bit boot"
+	cat "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" | sed 'N;$!P;$!D;$d' > "$3/Library/Temp/i3861.txt"
+	cat "$3/Library/Temp/i3861.txt" "/usr/share/i386.txt" > "$3/Library/Temp/i3863.plist"
+	rm "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist"
+	mv "$3/Library/Temp/i3863.plist" "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist"
+	rm "$3/Library/Temp/i3861.txt"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions" ]; then
+	{
+	echo "moving files to /Extra/Extensions/"
+	/bin/mv "$3/Library/Temp/Natit.kext" "$3/Extra/Extensions/"
+	exit 0
+	}
+elif [ -d "$3/System/Library/Extensions" ]; then
+	{
+	echo "moving files to /System/Library/Extensions/"
+	/bin/mv "$3/Library/Temp/Natit.kext" "$3/System/Library/Extensions/"
+	exit 0
+	}
+else
+	{
+	echo "no system folder"
+	}
+fi
+
+exit 0

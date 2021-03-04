@@ -1,0 +1,43 @@
+#!/bin/sh
+
+nbe=$(cat "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" | grep "device-properties")
+if [ -n "$nbe" ]; then
+	{
+	echo "please select only 1 efi string package!"
+	exit 0
+	}
+else
+	{
+	echo " "
+	}
+fi
+
+displayx=`gfxutil -f display | awk '{print $3}'`
+echo $displayx
+cat "$3/Library/Temp/gma/gma.plist" | sed 's_zczc_'$displayx'_' > "$3/Library/Temp/gma/gma2.plist"
+gfxutil -i xml -o hex "$3/Library/Temp/gma/gma2.plist" "$3/Library/Temp/gma/string.hex"
+hex=`cat "$3/Library/Temp/gma/string.hex"`
+
+if [ -f "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" ]; then
+	{
+	echo "adding efi string to Boot.plist"
+	cat "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" | sed 'N;$!P;$!D;$d' > "$3/Library/Temp/gma/gfx1.txt"
+	cat "$3/Library/Temp/gma/gfx1.txt" "$3/Library/Temp/gma/gfx2.txt" > "$3/Library/Temp/gma/gfx3.plist"
+	cat "$3/Library/Temp/gma/gfx3.plist" | sed 's_zxzx_'$hex'_' > "$3/Library/Temp/gma/gfx4.plist"
+	rm "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist"
+	mv "$3/Library/Temp/gma/gfx4.plist" "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist"
+	rm "$3/Library/Temp/gma/gfx1.txt"
+	rm "$3/Library/Temp/gma/gfx2.txt"
+	rm "$3/Library/Temp/gma/gfx3.plist"
+	rm "$3/Library/Temp/gma/string.hex"
+	rm "$3/Library/Temp/gma/gma.plist"
+	rm "$3/Library/Temp/gma/gma2.plist"
+	exit 0
+	}
+else
+	{
+	echo "com.apple.Boot.plist not found"
+	}
+fi
+
+exit 0

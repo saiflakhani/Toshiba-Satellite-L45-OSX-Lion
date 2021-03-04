@@ -1,0 +1,24 @@
+#!/bin/sh
+
+vbn=`cat "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" | grep -w i386`
+if [ -n "$vbn" ]; then
+	{
+	echo " "
+	}
+else
+	{
+	echo "modifying Boot.plist for 32bit boot"
+	cat "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist" | sed 'N;$!P;$!D;$d' > "$3/Library/Temp/i3861.txt"
+	cat "$3/Library/Temp/i3861.txt" "/usr/share/i386.txt" > "$3/Library/Temp/i3863.plist"
+	rm "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist"
+	mv "$3/Library/Temp/i3863.plist" "$3/Library/Preferences/SystemConfiguration/com.apple.Boot.plist"
+	rm "$3/Library/Temp/i3861.txt"
+	}
+fi
+
+/bin/rm -R "$3/System/Library/Extensions/AppleIntelGMAX3100FB.kext"
+/bin/rm -R "$3/System/Library/Extensions/AppleIntelIntegratedFramebuffer.kext"
+/bin/mv "$3/Library/Temp/AppleIntelGMAX3100FB.kext" "$3/System/Library/Extensions/"
+/bin/mv "$3/Library/Temp/AppleIntelIntegratedFramebuffer.kext" "$3/System/Library/Extensions/"
+
+exit 0

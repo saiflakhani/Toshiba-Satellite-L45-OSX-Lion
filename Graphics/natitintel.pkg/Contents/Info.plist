@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>natitintel 1.0 Copyrights © 2010 uphuck</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.uphuck.pkg.natitintel</string>
+	<key>CFBundleName</key>
+	<string>natitintel</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>IFMajorVersion</key>
+	<integer>1</integer>
+	<key>IFMinorVersion</key>
+	<integer>0</integer>
+	<key>IFPkgBuildDate</key>
+	<date>2010-02-14T11:16:28Z</date>
+	<key>IFPkgBuildVersion</key>
+	<string>10C540</string>
+	<key>IFPkgCreator</key>
+	<string>IcebergBuilder 1.2.4</string>
+	<key>IFPkgFlagAllowBackRev</key>
+	<true/>
+	<key>IFPkgFlagAuthorizationAction</key>
+	<string>RootAuthorization</string>
+	<key>IFPkgFlagDefaultLocation</key>
+	<string>/</string>
+	<key>IFPkgFlagFollowLinks</key>
+	<false/>
+	<key>IFPkgFlagInstalledSize</key>
+	<integer>116</integer>
+	<key>IFPkgFlagIsRequired</key>
+	<false/>
+	<key>IFPkgFlagOverwritePermissions</key>
+	<false/>
+	<key>IFPkgFlagRelocatable</key>
+	<true/>
+	<key>IFPkgFlagRestartAction</key>
+	<string>NoRestart</string>
+	<key>IFPkgFlagRootVolumeOnly</key>
+	<false/>
+	<key>IFPkgFlagUpdateInstalledLanguages</key>
+	<false/>
+	<key>IFPkgFormatVersion</key>
+	<real>0.10000000149011612</real>
+</dict>
+</plist>

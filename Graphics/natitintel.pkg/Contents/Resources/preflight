@@ -1,0 +1,153 @@
+#!/bin/sh
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/ATY_Init.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/ATY_Init.kext"
+	echo "ATY_Init.kext"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/ATY_Init.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/ATY_Init.kext"
+	echo "ATY_Init e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/Natit.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/Natit.kext"
+	echo "Natit"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/Natit.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/Natit.kext"
+	echo "Natit e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/NVinject.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/NVinject.kext"
+	echo "NVinject"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/NVinject.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/NVinject.kext"
+	echo "NVinject e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/NVdarwin.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/NVdarwin.kext"
+	echo "NVdarwin"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/NVdarwin.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/NVdarwin.kext"
+	echo "NVdarwin e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/CoreVidia.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/CoreVidia.kext"
+	echo "CoreVidia"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/CoreVidia.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/CoreVidia.kext"
+	echo "CoreVidia e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions" ]; then
+	{
+	cd "$3/Recovered Items/System/Library/Extensions"
+	/bin/rm -R ./NVEnabler*
+	echo "NVEnabler"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions" ]; then
+	{
+	cd "$3/Extra/Extensions"
+	/bin/rm -R ./NVEnabler*
+	echo "NVEnabler e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/NVkush.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/NVkush.kext"
+	echo "NVkush"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/NVkush.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/NVkush.kext"
+	echo "NVkush e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/NVinjectGo.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/NVinjectGo.kext"
+	echo "NVinjectGo"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/NVinjectGo.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/NVinjectGo.kext"
+	echo "NVinjectGo e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/Titan.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/Titan.kext"
+	echo "Titan"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/Titan.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/Titan.kext"
+	echo "Titan e"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/NVDAResman2.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/NVDAResman2.kext"
+	echo "NVDAResman2"
+	}
+fi
+
+if [ -d "$3/Recovered Items/System/Library/Extensions/EVOenabler.kext" ]; then
+	{
+	/bin/rm -R "$3/Recovered Items/System/Library/Extensions/EVOenabler.kext"
+	echo "EVOenabler"
+	}
+fi
+
+if [ -d "$3/Extra/Extensions/EVOenabler.kext" ]; then
+	{
+	/bin/rm -R "$3/Extra/Extensions/EVOenabler.kext"
+	echo "EVOenabler e"
+	}
+fi
+
+exit 0
+

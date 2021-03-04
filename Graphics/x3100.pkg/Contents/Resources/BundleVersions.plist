@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>./Library/Temp/AppleIntelGMAX3100FB.kext/version.plist</key>
+	<dict>
+		<key>BuildVersion</key>
+		<string>4</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.5.18</string>
+		<key>CFBundleVersion</key>
+		<string>5.1.8</string>
+		<key>ProjectName</key>
+		<string>GraphicsDrivers</string>
+		<key>SourceVersion</key>
+		<string>51807</string>
+	</dict>
+	<key>./Library/Temp/AppleIntelIntegratedFramebuffer.kext/version.plist</key>
+	<dict>
+		<key>BuildVersion</key>
+		<string>1</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.6.0</string>
+		<key>CFBundleVersion</key>
+		<string>6.0.0</string>
+		<key>ProjectName</key>
+		<string>GraphicsDrivers</string>
+		<key>SourceVersion</key>
+		<string>60088</string>
+	</dict>
+</dict>
+</plist>
